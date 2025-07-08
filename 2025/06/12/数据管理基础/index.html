@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+<link
+  rel="stylesheet"
+  href="https://fastly.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bronova:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"aliasrevir.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":15,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="感觉输麻了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据管理基础">
+<meta property="og:url" content="https://aliasrevir.github.io/2025/06/12/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="XiEn&#39;s Cave">
+<meta property="og:description" content="感觉输麻了">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-12T09:21:00.000Z">
+<meta property="article:modified_time" content="2025-06-12T09:21:00.000Z">
+<meta property="article:author" content="XiEn">
+<meta property="article:tag" content="Todo">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://aliasrevir.github.io/2025/06/12/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://aliasrevir.github.io/2025/06/12/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/","path":"2025/06/12/数据管理基础/","title":"数据管理基础"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数据管理基础 | XiEn's Cave</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script size="200" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XiEn's Cave</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wandering astray, trying to postpone tomorrow</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-逆流"><a href="/2023/05/02/countdown-unleashed/" rel="section"><i class="fa fa-crow fa-bounce fa-fw"></i>逆流</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="nav-text">第二章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="nav-text">第四章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="nav-text">第五章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="nav-text">第六章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0"><span class="nav-text">第七章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0"><span class="nav-text">第十章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0"><span class="nav-text">第十一章</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XiEn"
+      src="/images/avatar-plain.png">
+  <p class="site-author-name" itemprop="name">XiEn</p>
+  <div class="site-description" itemprop="description">龙形全自动咕咕机</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/aliasRevir" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;aliasRevir" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:XiEn@smail.nju.edu.cn" title="E-Mail → mailto:XiEn@smail.nju.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/352199295" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;352199295" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.furaffinity.net/user/amagddon" title="FurAffinity → https:&#x2F;&#x2F;www.furaffinity.net&#x2F;user&#x2F;amagddon" rel="noopener me" target="_blank"><i class="fa fa-dragon fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://aliasrevir.github.io/2025/06/12/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-plain.png">
+      <meta itemprop="name" content="XiEn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XiEn's Cave">
+      <meta itemprop="description" content="龙形全自动咕咕机">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数据管理基础 | XiEn's Cave">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据管理基础
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-12 17:21:00" itemprop="dateCreated datePublished" datetime="2025-06-12T17:21:00+08:00">2025-06-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/40-x-%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">40.x 笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/40-x-%E7%AC%94%E8%AE%B0/40-1-%E8%AF%BE%E7%A8%8B%E5%A4%8D%E4%B9%A0-NJUSE/" itemprop="url" rel="index"><span itemprop="name">40.1 课程复习@NJUSE</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.2k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>基于王珊《数据库系统概论》第 6 版</p>
+<p>在燃神 @hr 总结的期末重点上进行注解。由于是后面才想起来有重点所以前三章没有整，如果有机会的话后面再补（虽然前几章也没有什么内容）</p>
+<p>不考的内容里面也有一些很有趣的东西，说不定也会补，咕咕咕</p>
+</blockquote>
+<blockquote>
+<p><strong>作业非常重要！！！需要会！！！</strong></p>
+</blockquote>
+<h3 id="第一章"><a class="anchor" href="#第一章">#</a>第一章</h3>
+<blockquote>
+<p>基本概念：三个模型与映射，理解针对什么东西<br>
+概念模型E-R图<br>
+逻辑模型中关于关系的基本概念<br>
+结构：三级模式两个映射</p>
+</blockquote>
+<h3 id="第二章"><a class="anchor" href="#第二章">#</a>第二章</h3>
+<blockquote>
+<p>关系、码、关系基本性质<br>
+关系的完整性：三类约束条件，如何利用其进行检查处理<br>
+关系代数，包括集合、符号、与关系有关的操作等，操作的含义、结果如何做的很重要，详细定义可以不知道，但要知道怎么执行。用关系代数表达一些语义</p>
+</blockquote>
+<h3 id="第三章"><a class="anchor" href="#第三章">#</a>第三章</h3>
+<blockquote>
+<p>sql，特征仅看过理解即可，了解性质<br>
+知道数据定义、语法、代表含义，利用语法定义表等均需要<br>
+数据查询单表、连接需要，嵌套不做要求，用连接完成即可，尽量别嵌套（有风险）<br>
+集合、创建视图、更新删除等也需了解<br>
+了解空值等概念，不会特别考，但要知道<br>
+整个sql没什么不要的东西</p>
+</blockquote>
+<h3 id="第四章"><a class="anchor" href="#第四章">#</a>第四章</h3>
+<blockquote>
+<p>存取控制，如何做？缺点在哪里？REVOKE、GRANT等语句<br>
+强制控制和自主控制均要知道怎么做、有何缺点，不会很细</p>
+</blockquote>
+<p>自主：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="operator">&lt;</span>权限类型<span class="operator">&gt;</span> <span class="keyword">ON</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span> <span class="keyword">TO</span> <span class="operator">&lt;</span>用户<span class="operator">/</span>角色<span class="operator">&gt;</span> [<span class="keyword">WITH</span> <span class="keyword">GRANT</span> OPTION];</span><br><span class="line"><span class="keyword">REVOKE</span> <span class="operator">&lt;</span>权限类型<span class="operator">&gt;</span> <span class="keyword">ON</span> <span class="operator">&lt;</span>对象类型<span class="operator">&gt;</span> <span class="operator">&lt;</span>对象名<span class="operator">&gt;</span> <span class="keyword">FROM</span> <span class="operator">&lt;</span>用户<span class="operator">/</span>角色<span class="operator">&gt;</span> [CASCADE <span class="operator">|</span> RESTRICT];</span><br></pre></td></tr></table></figure>
+<p>“授权蔓延”、难以撤销、不适合高安全性环境</p>
+<p>强制：密级</p>
+<p>实现复杂、管理开销大、灵活性差、主要用于高安全性领域</p>
+<h3 id="第五章"><a class="anchor" href="#第五章">#</a>第五章</h3>
+<blockquote>
+<p>详细讨论完整性，断言和触发器不作要求<br>
+完整性检查需要知道怎么做</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>实体完整性：<code>UNIQUE/NOT NULL</code></p>
+</li>
+<li class="lvl-2">
+<p>参照完整性：<code>FOREIGN KEY</code></p>
+<ul class="lvl-2">
+<li class="lvl-5"><code>ON DELETE NO ACTION</code></li>
+<li class="lvl-5"><code>ON DELETE CASCADE</code></li>
+<li class="lvl-5"><code>ON DELETE SET NULL</code></li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>用户定义完整性：</p>
+<ul class="lvl-2">
+<li class="lvl-5">属性上：
+<ul class="lvl-4">
+<li class="lvl-8"><code>NOT NULL</code></li>
+<li class="lvl-8"><code>UNIQUE</code></li>
+<li class="lvl-8"><code>CHECK(expr)</code>：<code>CHECK(Grade &gt;= 0 AND Grade &lt;= 100)</code></li>
+</ul>
+</li>
+<li class="lvl-5">元组上：
+<ul class="lvl-4">
+<li class="lvl-8"><code>CHECK(expr)</code>：<code>CHECK(Ssex = '女' OR Sname NOT LIKE 'Ms.%')</code></li>
+</ul>
+</li>
+<li class="lvl-5">也可以写成 <code>CONSTRAINT &lt;name&gt; expr/UNIQUE/NOT NULL</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="第六章"><a class="anchor" href="#第六章">#</a>第六章</h3>
+<blockquote>
+<p>BCNF之前需要知道，之后的不需要知道<br>
+函数依赖等需要知道，给出例子需要能判断范式级别，也要知道如何提升等级<br>
+范式详细定义不会考，只考判定</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>1NF：所有属性均不可分</p>
+</li>
+<li class="lvl-2">
+<p>2NF：所有非主属性均完全函数依赖于主码（不能只依赖于一部分）</p>
+<ul class="lvl-2">
+<li class="lvl-5">反例：<code>学生_课程_教师 (*StudentID, CourseID*, StudentName, TeacherName)</code> 中，<code>StudentName</code> 只依赖于 <code>StudentID</code>，etc.</li>
+<li class="lvl-5">如何做到 2NF？把所有部分函数依赖的键和它们各自依赖的主码的子集分拆出来</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>3NF：所有非主属性都直接函数依赖于主码</p>
+<ul class="lvl-2">
+<li class="lvl-5">反例：<code>员工 (*EmpID*, EmpName, DeptID, DeptName)</code> 中，<code>DeptName</code> 间接依赖于 <code>EmpID</code>（因为直接依赖于 <code>DeptID</code> 这个非主属性）</li>
+<li class="lvl-5">如何做到 3NF？把所有传递依赖的属性和它们各自直接函数依赖的属性分拆出来</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>BCNF：所有决定因素（无论是主属性还是非主属性）都必须是超码</p>
+<ul class="lvl-2">
+<li class="lvl-5">反例：<code>学生_课程_助教 (StudentID, Course, Assistant)</code> 中，如果 一个学生在特定课程中只能有一个助教 且 一个助教只负责一门课程，则不是 BCNF。因为课程依赖于助教，而助教不是超码。</li>
+<li class="lvl-5">如何做到 BCNF？将不符合 BCNF 的关系进行分解，使得分解后的所有关系都满足 BCNF。</li>
+</ul>
+</li>
+</ul>
+<h3 id="第七章"><a class="anchor" href="#第七章">#</a>第七章</h3>
+<blockquote>
+<p>数据分析不用太关注，要会绘制ER图<br>
+概念结构设计了解即可，如何将图拆开合并去除冗余，但是考试不是重点<br>
+逻辑结构设计转换要会做，ER图转换成表等<br>
+垂直和水平分解利弊需要知道，答题时要求举例一定要能够举例，什么时候用水平拆分，为什么用需要能说<br>
+物理模型设计：优化方式包括聚簇要求掌握，索引概念、创建索引等需要知道</p>
+</blockquote>
+<p>E-R 图：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>方框是实体</p>
+</li>
+<li class="lvl-2">
+<p>菱形是实体间的关系（1-1，1-n，m-n，或多元关系 etc.）</p>
+</li>
+<li class="lvl-2">
+<p>椭圆是实体或关系的（独有）属性</p>
+</li>
+</ul>
+<p>如何拆分 E-R 图：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>属性不能再具有需要描述的性质</p>
+</li>
+<li class="lvl-2">
+<p>属性不能再与其它实体具有联系</p>
+</li>
+</ul>
+<p>如何合并 E-R 图：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>属性冲突</p>
+<ul class="lvl-2">
+<li class="lvl-5">属性域冲突：例如你用 0 1 我用 ‘MALE’ ‘FEMALE’，需要统一定义</li>
+<li class="lvl-5">属性取值单位冲突：例如你精确到年份我精确到日期，需要统一定义</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>命名冲突</p>
+<ul class="lvl-2">
+<li class="lvl-5">同名异义，需要改名字</li>
+<li class="lvl-5">异名同义，需要改名字</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>结构冲突</p>
+<ul class="lvl-2">
+<li class="lvl-5">同一对象有不同抽象：你用属性我用实体，需要修改</li>
+<li class="lvl-5">同一实体属性不同：你比我多属性，需要取并集</li>
+<li class="lvl-5">同一关系定义不同：你是一对一我是一对多，看情况保留或合并</li>
+</ul>
+</li>
+</ul>
+<p>逻辑结构设计转换：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一对一：可以合并到一端，或者单独分拆</p>
+</li>
+<li class="lvl-2">
+<p>一对多：可以合并到“对多”一端，或者单独分拆</p>
+</li>
+<li class="lvl-2">
+<p>多对多：单独分拆</p>
+</li>
+<li class="lvl-2">
+<p>多元：分拆</p>
+</li>
+</ul>
+<p>垂直分解：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>垂直分解是将一张表的列拆分到多个新的表中。每个新表都包含原始表的主键，以及原始表的某些非主键列。核心思想是根据列的访问模式将列分组，把经常同时使用的属性放在一起。</p>
+<ul class="lvl-2">
+<li class="lvl-5">利：
+<ul class="lvl-4">
+<li class="lvl-8">减少行宽</li>
+<li class="lvl-8">提高数据局部性：常用列放在一起，访问时数据更集中</li>
+</ul>
+</li>
+<li class="lvl-5">弊：
+<ul class="lvl-4">
+<li class="lvl-8">增加 JOIN 操作</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>水平分解：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>水平分解是将一张表（关系表）的行拆分到多个新的表中（或相同结构的多个数据库中），每个新表都包含原始表的完整结构。拆分通常基于某个列的值范围、哈希值或列表值。</p>
+<ul class="lvl-2">
+<li class="lvl-5">利：
+<ul class="lvl-4">
+<li class="lvl-8">方便事务使用最经常使用的数据</li>
+<li class="lvl-8">如果若干个事务使用的数据不相交，可以让这些事务存取数据</li>
+</ul>
+</li>
+<li class="lvl-5">弊：
+<ul class="lvl-4">
+<li class="lvl-8">跨分区查询困难</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>聚簇：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一种物理数据组织方式，决定数据行在磁盘上的实际存储顺序。</p>
+</li>
+<li class="lvl-2">
+<p>如果一个表是聚簇的，那么具有相似聚簇键值的行将被物理地存储在一起。</p>
+</li>
+<li class="lvl-2">
+<p>使用 <code>CLUSTERED INDEX</code> 建立</p>
+</li>
+</ul>
+<p>索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">UNIQUE</span>] [CLUSTERED <span class="operator">|</span> NONCLUSTERED] INDEX index_name</span><br><span class="line"><span class="keyword">ON</span> table_name (column1 [<span class="keyword">ASC</span><span class="operator">|</span><span class="keyword">DESC</span>], column2 [<span class="keyword">ASC</span><span class="operator">|</span><span class="keyword">DESC</span>], ...);</span><br></pre></td></tr></table></figure>
+<h3 id="第十章"><a class="anchor" href="#第十章">#</a>第十章</h3>
+<blockquote>
+<p>事务的定义要知道<br>
+故障恢复过程中，日志、检查点等都需要知道，数据库镜像不是重点<br>
+恢复策略不作要求</p>
+</blockquote>
+<p>事务：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>事务是数据库管理系统（DBMS）执行的一个或一组操作，视为一个单一的、逻辑的工作单元。</p>
+</li>
+<li class="lvl-2">
+<p>事务是原子性的，要么全部成功执行并持久化到数据库，要么全部失败并回滚。</p>
+</li>
+<li class="lvl-2">
+<p>特性：ACID 原则</p>
+<ul class="lvl-2">
+<li class="lvl-5">原子性 (Atomicity)： 事务是“全有或全无”的。事务中的所有操作要么全部成功，要么全部失败并撤销。即使发生系统故障，已提交的事务也不会丢失。</li>
+<li class="lvl-5">一致性 (Consistency)： 事务执行前后，数据库必须保持一致性状态。这意味着事务必须遵守所有预定义的规则、完整性约束（如主键、外键、检查约束）和业务逻辑。</li>
+<li class="lvl-5">隔离性 (Isolation)： 多个并发执行的事务之间互不干扰。一个事务的中间状态对其他事务是不可见的，就好像它们是串行执行的一样。这防止了脏读、不可重复读和幻读等并发问题。</li>
+<li class="lvl-5">持久性 (Durability)： 一旦事务成功提交，其对数据库所做的更改是永久性的，即使发生系统崩溃或电源故障，这些更改也不会丢失。数据库管理系统会确保这些更改被安全地记录下来。</li>
+</ul>
+</li>
+</ul>
+<p>故障：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>事务故障：事务没有达到预期终点（COMMIT 或 ROLLBACK）</p>
+<ul class="lvl-2">
+<li class="lvl-5">需要撤销事务已经做出的任何修改（因为它确实未完成）</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>系统故障：系统停止运转</p>
+<ul class="lvl-2">
+<li class="lvl-5">需要撤销未完成事务、重做已提交（因为可能在缓存中，未写回磁盘）事务</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>介质故障：硬盘炸了</p>
+<ul class="lvl-2">
+<li class="lvl-5">备份，否则没救了</li>
+</ul>
+</li>
+</ul>
+<p>日志：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一个连续的记录序列，详细记录了数据库中发生的所有事务操作（包括数据的修改、插入、删除，以及事务的开始、提交、回滚等）。</p>
+</li>
+<li class="lvl-2">
+<p>内容包含：</p>
+<ul class="lvl-2">
+<li class="lvl-5">事务 ID</li>
+<li class="lvl-5">操作类型（如 INSERT, UPDATE, DELETE）</li>
+<li class="lvl-5">被修改的数据项标识（如表名、行 ID）</li>
+<li class="lvl-5">旧值 (Before Image)： 数据项被修改前的值（用于回滚事务）</li>
+<li class="lvl-5">新值 (After Image)： 数据项被修改后的新值（用于重做已提交事务）</li>
+<li class="lvl-5">事务的开始、提交、回滚记录</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>为什么重做已提交任务是可行的？</p>
+<p>因为赋值操作是幂等的，多做一次并不会改变结果。同理，这就是为什么日志是赋值而非修改</p>
+</blockquote>
+<p>检查点：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>将内存中所有已提交但尚未写入磁盘的数据（即脏页）强制写入磁盘，并记录下日志文件的当前位置。简单来说，它为恢复过程创建了一个一致的起点。</p>
+</li>
+<li class="lvl-2">
+<p>操作过程：</p>
+<ul class="lvl-2">
+<li class="lvl-5">暂停或限制新的数据库活动。</li>
+<li class="lvl-5">将所有内存中的脏页（已修改但未写入磁盘的数据页）写入磁盘。</li>
+<li class="lvl-5">将所有活跃事务的日志记录强制写入磁盘。</li>
+<li class="lvl-5">在日志文件中写入一个特殊的检查点记录，其中包含活跃事务列表和日志起始位置等信息。</li>
+<li class="lvl-5">恢复正常数据库活动。</li>
+</ul>
+</li>
+</ul>
+<h3 id="第十一章"><a class="anchor" href="#第十一章">#</a>第十一章</h3>
+<blockquote>
+<p>并发控制为什么会出问题？如何解决不一致性？——主要是封锁，两种锁，写读锁之间如何影响，几个协议相互关系等<br>
+事务调度：基本概念，串行、冲突可串行化包括后面的几个锁等都需要知道<br>
+重点在讨论理解性和技术的部分，概念性的东西不是重点。</p>
+</blockquote>
+<p>隔离级别：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>读未提交：可以读未提交的内容，解决丢失修改</p>
+</li>
+<li class="lvl-2">
+<p>读已提交：只能读已提交的内容，解决脏读</p>
+</li>
+<li class="lvl-2">
+<p>可重复读：读过的内容别人不能写（S 锁），解决不可重复读</p>
+</li>
+<li class="lvl-2">
+<p>串行化：两阶段封锁，解决幻读</p>
+</li>
+</ul>
+<blockquote>
+<p>为什么读未提交解决了丢失修改？因为这四个隔离级别都会给写加 X 锁</p>
+</blockquote>
+<p>两种基本锁类型：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>排他锁 (Exclusive Lock, X-Lock / 写锁)</p>
+<ul class="lvl-2">
+<li class="lvl-5">用于写操作（INSERT, UPDATE, DELETE）</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>共享锁 (Shared Lock, S-Lock / 读锁)</p>
+<ul class="lvl-2">
+<li class="lvl-5">用途： 用于读操作（SELECT）</li>
+</ul>
+</li>
+</ul>
+<p>协议：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一级封锁协议</p>
+<ul class="lvl-2">
+<li class="lvl-5">事务在修改数据之前必须加 X-Lock，事务结束后释放 X-Lock。</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>二级封锁协议</p>
+<ul class="lvl-2">
+<li class="lvl-5">在一级封锁协议的基础上，事务在读取数据之前必须加 S-Lock，读完即可释放 S-Lock。修改数据前加 X-Lock，事务结束后释放 X-Lock。</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>三级封锁协议</p>
+<ul class="lvl-2">
+<li class="lvl-5">在二级封锁协议的基础上，要求 S-Lock 也必须在事务结束时才释放（而非读完释放）。</li>
+</ul>
+</li>
+</ul>
+<p>冲突可串行化 (Conflict Serializability)</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>冲突操作： 指在不同事务中，针对同一数据项，且至少有一个操作是写操作的两个操作。</p>
+<ul class="lvl-2">
+<li class="lvl-5">R(X) 与 W(X) 冲突 (读写冲突)</li>
+<li class="lvl-5">W(X) 与 R(X) 冲突 (写读冲突)</li>
+<li class="lvl-5">W(X) 与 W(X) 冲突 (写写冲突)</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>冲突等价： 如果一个并发调度通过交换非冲突操作的顺序，可以转换为一个串行调度，那么这个并发调度就是冲突可串行化的。</p>
+</li>
+<li class="lvl-2">
+<p>可串行化：执行结果与这些事务的某个串行调度的执行结果相同（是“冲突可串行化”的超集）。</p>
+</li>
+<li class="lvl-2">
+<p>意义： 冲突可串行化是判断并发调度是否正确（即是否能避免所有并发异常）的重要标准之一。如果一个调度是冲突可串行化的，那么它保证是正确的。</p>
+</li>
+<li class="lvl-2">
+<p>与 2PL 的关系： 所有遵守两阶段封锁协议（2PL）的调度都是冲突可串行化的。 这也是 2PL 如此重要的原因。它提供了一个实际可行的机制来生成正确的并发调度。</p>
+</li>
+</ul>
+<p>两段锁协议保证可串行化调度，但是有可能死锁。</p>
+<p>意向锁是用来减少“加锁时查询子节点是否有锁”的开销的。</p>
+<p>SIX 是 S + IX，所以共存性是两个锁相交</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Todo/" rel="tag"># Todo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/11/%E5%8D%B0%E8%B1%A1%E6%B4%BE%E5%92%96%E5%95%A1%E6%9C%BA/" rel="prev" title="印象派咖啡机">
+                  <i class="fa fa-angle-left"></i> 印象派咖啡机
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/06/14/%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB-%E6%A0%87%E7%AD%BE%E6%8C%87%E5%8C%97/" rel="next" title="博客分类 & 标签指北">
+                  博客分类 & 标签指北 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-dragon"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XiEn</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">146k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"aliasrevir/aliasrevir.github.io","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>

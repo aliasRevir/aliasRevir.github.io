@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+<link
+  rel="stylesheet"
+  href="https://fastly.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bronova:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"aliasrevir.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":15,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="感觉我没做往年题是不是赢了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统">
+<meta property="og:url" content="https://aliasrevir.github.io/2025/06/07/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="XiEn&#39;s Cave">
+<meta property="og:description" content="感觉我没做往年题是不是赢了">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-07T06:50:00.000Z">
+<meta property="article:modified_time" content="2025-06-07T06:50:00.000Z">
+<meta property="article:author" content="XiEn">
+<meta property="article:tag" content="Todo">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://aliasrevir.github.io/2025/06/07/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://aliasrevir.github.io/2025/06/07/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/","path":"2025/06/07/操作系统/","title":"操作系统"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>操作系统 | XiEn's Cave</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script size="200" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XiEn's Cave</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wandering astray, trying to postpone tomorrow</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-逆流"><a href="/2023/05/02/countdown-unleashed/" rel="section"><i class="fa fa-crow fa-bounce fa-fw"></i>逆流</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E8%AF%BE%E7%A8%8B%E9%A2%84%E4%B9%A0"><span class="nav-text">第一部分 课程预习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E4%B8%80-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA"><span class="nav-text">课时一 操作系统引论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5%E5%8F%8A%E7%89%B9%E5%BE%81"><span class="nav-text">1.1 操作系统的概念及特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%8E%A5%E5%8F%A3"><span class="nav-text">1.2 操作系统的功能和接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B"><span class="nav-text">1.3 操作系统的发展过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="nav-text">1.4 操作系统的运行环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">1.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E4%BA%8C-%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0%E4%B8%8E%E6%8E%A7%E5%88%B6"><span class="nav-text">课时二 进程的描述与控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">2.1 进程的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="nav-text">2.2 进程的状态与转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="nav-text">2.3 进程通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">2.4 线程的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">2.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E4%B8%89-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">课时三 处理机调度（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">3.1 处理机调度的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E4%B8%89%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-text">3.2 三种简单的调度算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">3.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%9B%9B-%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-text">课时四 处理机调度（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%97%B6%E9%97%B4%E7%89%87%E8%BD%AE%E8%BD%AC%E7%AE%97%E6%B3%95-RR%EF%BC%88Round-Robin%EF%BC%89"><span class="nav-text">4.1 时间片轮转算法 RR（Round-Robin）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E9%AB%98%E7%9B%B8%E5%BA%94%E6%AF%94%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95-HRRN%EF%BC%88Highest-Response-Ratio-Next%EF%BC%89"><span class="nav-text">4.2 高相应比优先算法 HRRN（Highest Response Ratio Next）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E5%A4%9A%E7%BA%A7%E5%8F%8D%E9%A6%88%E9%98%9F%E5%88%97%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95-MLFQ%EF%BC%88Multi-Level-Feedback-Queue%EF%BC%89"><span class="nav-text">4.3 多级反馈队列调度算法 MLFQ（Multi-Level Feedback Queue）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">4.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E4%BA%94-%E6%AD%BB%E9%94%81%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">课时五 死锁（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%AD%BB%E9%94%81%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">5.1 死锁的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E6%AD%BB%E9%94%81%E9%A2%84%E9%98%B2"><span class="nav-text">5.2 死锁预防</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">5.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%85%AD-%E6%AD%BB%E9%94%81%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-text">课时六 死锁（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E6%AD%BB%E9%94%81%E7%9A%84%E9%81%BF%E5%85%8D"><span class="nav-text">6.1 死锁的避免</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E6%AD%BB%E9%94%81%E7%9A%84%E6%A3%80%E6%B5%8B%E4%B8%8E%E6%B6%88%E9%99%A4"><span class="nav-text">6.2 死锁的检测与消除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">6.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E4%B8%83-%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">课时七 进程同步（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E5%90%8C%E6%AD%A5%E4%B8%8E%E4%BA%92%E6%96%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">7.1 同步与互斥的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-%E8%BD%AF%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6"><span class="nav-text">7.2 软件同步机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-%E7%A1%AC%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6"><span class="nav-text">7.3 硬件同步机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">7.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%85%AB-%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-text">课时八 进程同步（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="nav-text">8.1 信号量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-%E4%BF%A1%E5%8F%B7%E9%87%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%BA%94%E7%94%A8"><span class="nav-text">8.2 信号量的基本应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-%E7%AE%A1%E7%A8%8B"><span class="nav-text">8.3 管程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">8.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E4%B9%9D-%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%EF%BC%88%E4%B8%89%EF%BC%89"><span class="nav-text">课时九 进程同步（三）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-text">9.1 生产者消费者问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98"><span class="nav-text">9.2 读者写者问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98"><span class="nav-text">9.3 哲学家进餐问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">9.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">课时十 内存管理（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%92%8C%E8%A6%81%E6%B1%82"><span class="nav-text">10.1 内存管理的基本原理和要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-%E8%A6%86%E7%9B%96%E4%B8%8E%E4%BA%A4%E6%8D%A2"><span class="nav-text">10.2 覆盖与交换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">10.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E4%B8%80-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-text">课时十一 内存管理（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D%E7%AE%A1%E7%90%86"><span class="nav-text">11.1 连续分配管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E7%AE%A1%E7%90%86"><span class="nav-text">11.2 动态分区管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">11.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E4%BA%8C-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%89%EF%BC%89"><span class="nav-text">课时十二 内存管理（三）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-1-%E5%88%86%E9%A1%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-text">12.1 分页存储管理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-2-%E5%88%86%E6%AE%B5%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-text">12.2 分段存储管理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-3-%E6%AE%B5%E9%A1%B5%E5%BC%8F%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-text">12.3 段页式管理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">12.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E4%B8%89-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-text">课时十三 虚拟内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#13-1-%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">13.1 虚拟内存的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-2-%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="nav-text">13.2 页面置换算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-3-%E9%A1%B5%E9%9D%A2%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5"><span class="nav-text">13.3 页面分配策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">13.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E5%9B%9B-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">课时十四 文件管理（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#14-1-%E6%96%87%E4%BB%B6%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84"><span class="nav-text">14.1 文件逻辑结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-2-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="nav-text">14.2 文件目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-3-%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB"><span class="nav-text">14.3 文件共享</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-4-%E6%96%87%E4%BB%B6%E4%BF%9D%E6%8A%A4"><span class="nav-text">14.4 文件保护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">14.ex  练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E4%BA%94-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-text">课时十五 文件管理（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#15-1-%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84"><span class="nav-text">15.1 文件的物理结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-2-%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86"><span class="nav-text">15.2 文件存储空间管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">15.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E5%85%AD-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%89%EF%BC%89"><span class="nav-text">课时十六 文件管理（三）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#16-1-%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-text">16.1 文件的基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-2-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-text">16.2 文件系统的层次结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">16.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E4%B8%83-%E7%A3%81%E7%9B%98%E7%9A%84%E7%BB%84%E7%BB%87%E4%B8%8E%E7%AE%A1%E7%90%86"><span class="nav-text">课时十七 磁盘的组织与管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#17-1-%E7%A3%81%E7%9B%98"><span class="nav-text">17.1 磁盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-2-%E7%A3%81%E7%9B%98%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="nav-text">17.2 磁盘调度算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-3-%E7%A3%81%E7%9B%98%E7%9A%84%E7%AE%A1%E7%90%86"><span class="nav-text">17.3 磁盘的管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">17.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E5%85%AB-I-O-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%80%EF%BC%89"><span class="nav-text">课时十八 I&#x2F;O 设备管理（一）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#18-1-I-O-%E8%AE%BE%E5%A4%87%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E5%88%86%E7%B1%BB"><span class="nav-text">18.1 I&#x2F;O 设备的基本概念和分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-2-I-O-%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F"><span class="nav-text">18.2 I&#x2F;O 控制方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">18.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E5%8D%81%E4%B9%9D-I-O-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-text">课时十九 I&#x2F;O 设备管理（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#19-1-I-O-%E8%BD%AF%E4%BB%B6%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-text">19.1 I&#x2F;O 软件层次结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-2-I-O-%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="nav-text">19.2 I&#x2F;O 子系统概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">19.ex 练习题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E6%97%B6%E4%BA%8C%E5%8D%81-I-O-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%89%EF%BC%89"><span class="nav-text">课时二十 I&#x2F;O 设备管理（三）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#20-1-%E8%AE%BE%E5%A4%87%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6"><span class="nav-text">20.1 设备分配与回收</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-2-SPOOLing-%E6%8A%80%E6%9C%AF"><span class="nav-text">20.2 SPOOLing 技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-ex-%E7%BB%83%E4%B9%A0%E9%A2%98"><span class="nav-text">20.ex 练习题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E5%BE%80%E5%B9%B4%E9%A2%98%E6%95%B4%E7%90%86"><span class="nav-text">第二部分 往年题整理</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XiEn"
+      src="/images/avatar-plain.png">
+  <p class="site-author-name" itemprop="name">XiEn</p>
+  <div class="site-description" itemprop="description">龙形全自动咕咕机</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/aliasRevir" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;aliasRevir" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:XiEn@smail.nju.edu.cn" title="E-Mail → mailto:XiEn@smail.nju.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/352199295" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;352199295" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.furaffinity.net/user/amagddon" title="FurAffinity → https:&#x2F;&#x2F;www.furaffinity.net&#x2F;user&#x2F;amagddon" rel="noopener me" target="_blank"><i class="fa fa-dragon fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://aliasrevir.github.io/2025/06/07/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-plain.png">
+      <meta itemprop="name" content="XiEn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XiEn's Cave">
+      <meta itemprop="description" content="龙形全自动咕咕机">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="操作系统 | XiEn's Cave">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          操作系统
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-07 14:50:00" itemprop="dateCreated datePublished" datetime="2025-06-07T14:50:00+08:00">2025-06-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/40-x-%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">40.x 笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/40-x-%E7%AC%94%E8%AE%B0/40-1-%E8%AF%BE%E7%A8%8B%E5%A4%8D%E4%B9%A0-NJUSE/" itemprop="url" rel="index"><span itemprop="name">40.1 课程复习@NJUSE</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.2k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="前言"><a class="anchor" href="#前言">#</a>前言</h1>
+<blockquote>
+<p>还没写完！进度：往年题整理（0/7）</p>
+<p>往年题整理的部分可能会往后拖，原因如下：</p>
+<blockquote>
+<p>Xi’En: 06-10 21:51:36<br>
+感觉我没做往年题是不是赢了</p>
+</blockquote>
+</blockquote>
+<p>本文分为以下两部分：</p>
+<ol>
+<li class="lvl-3">
+<p>课程复习笔记</p>
+<ul class="lvl-2">
+<li class="lvl-5">考虑篇幅和效率原因，我们不使用本课程的教学资料进行复习
+<blockquote>
+<p>PPT 总字数约为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> 量级……</p>
+</blockquote>
+</li>
+<li class="lvl-5">复习部分采用<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12RN9eYEsj">蜂考《〈操作系统〉17小时系统学习》</a>课程讲义
+<ul class="lvl-4">
+<li class="lvl-8">此处只保留笔记部分，阅读时请参考<a href="/files/os/os.7z">讲义</a>进行（密码 velkhana）</li>
+<li class="lvl-8">个人实践，仅供参考。若希望获得更贴切的复习思路，可以阅读课程复习 PPT</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p>往年题整理</p>
+<ul class="lvl-2">
+<li class="lvl-5">在这一部分，我们会按照课程 PPT 的目录结构整理所有往年题目<br>
+<strong>注意：一定要自己做一遍慕课题目！其实很重要，这里不放只是博主有点懒</strong><br>
+往年题目来源如下：
+<ul class="lvl-4">
+<li class="lvl-8">2013年 (2013.pdf)</li>
+<li class="lvl-8">2014年 (2014样卷.pdf)</li>
+<li class="lvl-8">2016年 (2016卷A（空白）.pdf)</li>
+<li class="lvl-8">2019年 (2019操作系统试卷回忆.pdf)</li>
+<li class="lvl-8">2020年 (2020年期末卷回忆.pdf)</li>
+<li class="lvl-8">2021年 (2021考试回忆.md)</li>
+<li class="lvl-8">2022年 (2022回忆 (1).pdf)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>致谢：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>感谢好哥哥电报提供的复习资料！</p>
+</li>
+<li class="lvl-2">
+<p>感谢好兄弟CuWO4提供的往年题！</p>
+</li>
+</ul>
+<h1 id="第一部分-课程预习"><a class="anchor" href="#第一部分-课程预习">#</a>第一部分 课程预习</h1>
+<h2 id="课时一-操作系统引论"><a class="anchor" href="#课时一-操作系统引论">#</a>课时一 操作系统引论</h2>
+<h3 id="1-1-操作系统的概念及特征"><a class="anchor" href="#1-1-操作系统的概念及特征">#</a>1.1 操作系统的概念及特征</h3>
+<p>区分并发和并行：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>并发是快速交替地进行了操作</p>
+</li>
+<li class="lvl-2">
+<p>并行是同时进行了操作</p>
+</li>
+</ul>
+<h3 id="1-2-操作系统的功能和接口"><a class="anchor" href="#1-2-操作系统的功能和接口">#</a>1.2 操作系统的功能和接口</h3>
+<p>区分命令接口和程序接口的关系：</p>
+<ol>
+<li class="lvl-3">
+<p>命令接口是用户直接与操作系统交互的方式；</p>
+<ul class="lvl-2">
+<li class="lvl-5">包含 CLI/GUI 等。对应地举两个例子：在终端输入指令、使用资源管理器的图形界面拖放文件</li>
+<li class="lvl-5">需要注意：操作系统提供的图形化界面也是操作系统的一部分（即上一条第二个例子）</li>
+</ul>
+</li>
+<li class="lvl-3">
+<p>程序接口是程序与操作系统交互的形式</p>
+<ul class="lvl-2">
+<li class="lvl-5">是一批系统调用的统称</li>
+</ul>
+</li>
+</ol>
+<p>假如用户写了一段 C 代码，代码中调用 <code>getchar()</code> 时：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><code>getchar()</code> 是 glibc 提供的函数，底层使用含缓冲的 <code>read()</code> 实现</p>
+</li>
+<li class="lvl-2">
+<p><code>read()</code> 在缓冲区为空时会触发系统调用，触发时先设置调用号等参数，再 <code>int 0x80</code> 或 <code>syscall</code></p>
+</li>
+<li class="lvl-2">
+<p>此时（对应调用号的）系统调用是一段程序，从寄存器中获取参数并进行 IO 操作</p>
+</li>
+</ul>
+<p>前两点都属于用户程序，第三点才是系统调用，才属于程序接口</p>
+<h3 id="1-3-操作系统的发展过程"><a class="anchor" href="#1-3-操作系统的发展过程">#</a>1.3 操作系统的发展过程</h3>
+<p>按同时运行的任务数量分：单道程序系统/多道程序系统<br>
+多道程序系统需要使用中断，会带来进程切换的开销</p>
+<p>按时间分：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>批处理系统：批处理，不能交互</p>
+</li>
+<li class="lvl-2">
+<p>分时系统：一台主机通过采用时间片轮转方式允许多个用户同时使用</p>
+</li>
+<li class="lvl-2">
+<p>实时系统：系统能及时响应外部事件的请求，在规定的时间内完成对该事件的处理</p>
+</li>
+</ul>
+<h3 id="1-4-操作系统的运行环境"><a class="anchor" href="#1-4-操作系统的运行环境">#</a>1.4 操作系统的运行环境</h3>
+<blockquote>
+<p>关于“管态”“目态”的神秘命名可以看 https://www.zhihu.com/question/395146934</p>
+</blockquote>
+<p>用户态通过中断进入内核态，内核态通过执行一个特权指令将程序状态字 PSW 的标志位设为“用户态”来进入用户态</p>
+<p>内中断的信号来源与当前执行的指令有关（trap、缺页、整数除零），外中断反之（IO设备中断，kill）</p>
+<h3 id="1-ex-练习题"><a class="anchor" href="#1-ex-练习题">#</a>1.ex 练习题</h3>
+<p>计算机开机后如何加载操作系统：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>开机后执行存储在 ROM/EPROM 中的 BIOS 程序</p>
+<ul class="lvl-2">
+<li class="lvl-5">BIOS：Basic In/Out System，一个程序，负责遍历并检查是否有可引导的设备</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>如果找到引导设备，则把引导程序（Boot Loader）加载到 RAM 中并执行</p>
+</li>
+<li class="lvl-2">
+<p>引导程序将内核及必要的系统文件加载到 RAM 中</p>
+</li>
+<li class="lvl-2">
+<p>引导程序将控制权交给操作系统，操作系统启动</p>
+</li>
+</ul>
+<p>DOS：Disk Operating System，单用户单任务</p>
+<p>进程调度可以不需要（专用的）硬件支持，始终管理、地址映射、中断都需要</p>
+<h2 id="课时二-进程的描述与控制"><a class="anchor" href="#课时二-进程的描述与控制">#</a>课时二 进程的描述与控制</h2>
+<h3 id="2-1-进程的概念"><a class="anchor" href="#2-1-进程的概念">#</a>2.1 进程的概念</h3>
+<p>无</p>
+<h3 id="2-2-进程的状态与转换"><a class="anchor" href="#2-2-进程的状态与转换">#</a>2.2 进程的状态与转换</h3>
+<p>重点关注进程的状态转换图，后面会有新的内容</p>
+<h3 id="2-3-进程通信"><a class="anchor" href="#2-3-进程通信">#</a>2.3 进程通信</h3>
+<p>无</p>
+<h3 id="2-4-线程的概念"><a class="anchor" href="#2-4-线程的概念">#</a>2.4 线程的概念</h3>
+<p>分配资源的单位是进程，运行的单位是线程</p>
+<p>线程有 KLT ULT 两种，贴一个 gemini 整理的表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特性</th>
+<th style="text-align:left">用户级线程 (ULT)</th>
+<th style="text-align:left">系统级线程 (KLT)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>管理方</strong></td>
+<td style="text-align:left">用户空间线程库</td>
+<td style="text-align:left">操作系统内核</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>内核可见性</strong></td>
+<td style="text-align:left">不可见（内核只看到进程）</td>
+<td style="text-align:left">可见（内核知道每个线程）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>创建/销毁/切换</strong></td>
+<td style="text-align:left">快（用户态操作）</td>
+<td style="text-align:left">慢（需要陷入内核）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>阻塞问题</strong></td>
+<td style="text-align:left">单个线程阻塞导致整个进程阻塞</td>
+<td style="text-align:left">单个线程阻塞不影响其他线程</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>多核利用</strong></td>
+<td style="text-align:left">无法并行利用多核CPU</td>
+<td style="text-align:left">可以并行利用多核CPU</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>开销</strong></td>
+<td style="text-align:left">小</td>
+<td style="text-align:left">大</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>典型示例</strong></td>
+<td style="text-align:left">Old versions of Pthreads, Java’s green threads</td>
+<td style="text-align:left">Linux Pthreads (NPTL), Windows threads</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-ex-练习题"><a class="anchor" href="#2-ex-练习题">#</a>2.ex 练习题</h3>
+<p>线程之间只共享进程共有的资源和变量，可以拥有自己的资源和变量</p>
+<h2 id="课时三-处理机调度（一）"><a class="anchor" href="#课时三-处理机调度（一）">#</a>课时三 处理机调度（一）</h2>
+<h3 id="3-1-处理机调度的基本概念"><a class="anchor" href="#3-1-处理机调度的基本概念">#</a>3.1 处理机调度的基本概念</h3>
+<p>系统调用返回时可以进行调度：返回之前在内核态，适合评估；返回前评估一下是否有抢占之类</p>
+<p>用户登录会产生新进程、阻塞的进程变为就绪，都可能导致进程调度</p>
+<h3 id="3-2-三种简单的调度算法"><a class="anchor" href="#3-2-三种简单的调度算法">#</a>3.2 三种简单的调度算法</h3>
+<p>FCFS 对 IO 密集型任务不友好，因为经常被踢到队尾</p>
+<p>SJF 有最短的平均周转时间</p>
+<h3 id="3-ex-练习题"><a class="anchor" href="#3-ex-练习题">#</a>3.ex 练习题</h3>
+<p>无</p>
+<h2 id="课时四-处理机调度（二）"><a class="anchor" href="#课时四-处理机调度（二）">#</a>课时四 处理机调度（二）</h2>
+<h3 id="4-1-时间片轮转算法-RR（Round-Robin）"><a class="anchor" href="#4-1-时间片轮转算法-RR（Round-Robin）">#</a>4.1 时间片轮转算法 RR（Round-Robin）</h3>
+<p>无</p>
+<h3 id="4-2-高相应比优先算法-HRRN（Highest-Response-Ratio-Next）"><a class="anchor" href="#4-2-高相应比优先算法-HRRN（Highest-Response-Ratio-Next）">#</a>4.2 高相应比优先算法 HRRN（Highest Response Ratio Next）</h3>
+<p>也就是说：求一下如果现在执行，执行结束时这个程序一共等了几倍于它自己的时间，选比例最大的</p>
+<h3 id="4-3-多级反馈队列调度算法-MLFQ（Multi-Level-Feedback-Queue）"><a class="anchor" href="#4-3-多级反馈队列调度算法-MLFQ（Multi-Level-Feedback-Queue）">#</a>4.3 多级反馈队列调度算法 MLFQ（Multi-Level Feedback Queue）</h3>
+<p>注意葛季栋的多级反馈队列不太相同：程序被抢占时会执行完当前时间片再被剥夺</p>
+<h3 id="4-ex-练习题"><a class="anchor" href="#4-ex-练习题">#</a>4.ex 练习题</h3>
+<p>优先级有抢占和不抢占的两种不同实现</p>
+<h2 id="课时五-死锁（一）"><a class="anchor" href="#课时五-死锁（一）">#</a>课时五 死锁（一）</h2>
+<h3 id="5-1-死锁的概念"><a class="anchor" href="#5-1-死锁的概念">#</a>5.1 死锁的概念</h3>
+<p>无</p>
+<h3 id="5-2-死锁预防"><a class="anchor" href="#5-2-死锁预防">#</a>5.2 死锁预防</h3>
+<p>区分预防和避免：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>预防：破坏四个必要条件之一</p>
+</li>
+<li class="lvl-2">
+<p>避免：状态转移时，防止进入可能发生死锁的状态</p>
+</li>
+</ul>
+<h3 id="5-ex-练习题"><a class="anchor" href="#5-ex-练习题">#</a>5.ex 练习题</h3>
+<p>死锁定理：检测方法，先找到所有进程及其需要的资源（包括已占有的），然后尝试获得资源并消除，如果消完了就没有死锁，否则没消掉的部分会发生死锁</p>
+<h2 id="课时六-死锁（二）"><a class="anchor" href="#课时六-死锁（二）">#</a>课时六 死锁（二）</h2>
+<h3 id="6-1-死锁的避免"><a class="anchor" href="#6-1-死锁的避免">#</a>6.1 死锁的避免</h3>
+<p>快速了解银行家算法：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>先定义“安全序列”：按照这个序列让每个进程依次进行 a.获取最大资源量 b.运行 c.释放资源，可以让全部进程运行完成</p>
+</li>
+<li class="lvl-2">
+<p>（为什么要记录最大资源量？因为我们希望确保某个进程可以被完成，才能得到安全序列。如果没有最大值限制，任何一个进程都可能一直请求资源，于是不能保证任何进程可以被执行完成。）</p>
+</li>
+<li class="lvl-2">
+<p>每次分配资源时，先尝试分配，并检查是否存在“安全序列”，如果不存在则把这个分配请求扔到队列里等着</p>
+</li>
+</ul>
+<h3 id="6-2-死锁的检测与消除"><a class="anchor" href="#6-2-死锁的检测与消除">#</a>6.2 死锁的检测与消除</h3>
+<p>关注资源分配图的画法及对应的意义，死锁定理的内容在上一课时提到了</p>
+<h3 id="6-ex-练习题"><a class="anchor" href="#6-ex-练习题">#</a>6.ex 练习题</h3>
+<p>资源分配图成（有向）环不一定是死锁，但如果每种资源只有一个就是（想一想为什么）</p>
+<p>发生死锁时一定有循环等待，但是发生循环等待时未必死锁。从必要条件的角度分析并举例：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>不可剥夺：抢占</p>
+</li>
+<li class="lvl-2">
+<p>持有并等待：某个进程一段时间后释放自己所持有资源</p>
+</li>
+</ul>
+<h2 id="课时七-进程同步（一）"><a class="anchor" href="#课时七-进程同步（一）">#</a>课时七 进程同步（一）</h2>
+<h3 id="7-1-同步与互斥的基本概念"><a class="anchor" href="#7-1-同步与互斥的基本概念">#</a>7.1 同步与互斥的基本概念</h3>
+<p>注意区分临界资源和临界区，以及同步机制的准则。</p>
+<h3 id="7-2-软件同步机制"><a class="anchor" href="#7-2-软件同步机制">#</a>7.2 软件同步机制</h3>
+<p>快速了解 Peterson 算法：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>解决两个进程希望访问同一个临界资源的问题，避免无限等待</p>
+</li>
+<li class="lvl-2">
+<p>公有变量 <code>int turn</code> 表示现在轮到谁进入，<code>bool flag[2]</code> 表示第 i 个进程是否想要访问临界资源</p>
+</li>
+<li class="lvl-2">
+<p>执行时，先设置自己的 <code>flag</code> 为 <code>true</code> 宣称自己想要访问，再将 <code>turn</code> 设为对方</p>
+</li>
+<li class="lvl-2">
+<p>然后，如果轮到对方访问且对方想要访问，则等待</p>
+</li>
+<li class="lvl-2">
+<p>等待结束后进行访问，访问结束后将自己的 <code>flag</code> 设为 <code>false</code></p>
+</li>
+</ul>
+<p>保证了有限等待，不会出现饥饿现象，因为比自己晚来的进程会把资源让给自己。</p>
+<h3 id="7-3-硬件同步机制"><a class="anchor" href="#7-3-硬件同步机制">#</a>7.3 硬件同步机制</h3>
+<p>无</p>
+<h3 id="7-ex-练习题"><a class="anchor" href="#7-ex-练习题">#</a>7.ex 练习题</h3>
+<p>正在访问临界资源的进程在被中断时，仍然不允许其他进程进入它占有的临界区。</p>
+<h2 id="课时八-进程同步（二）"><a class="anchor" href="#课时八-进程同步（二）">#</a>课时八 进程同步（二）</h2>
+<h3 id="8-1-信号量"><a class="anchor" href="#8-1-信号量">#</a>8.1 信号量</h3>
+<p>记录型信号量除了能避免忙等待，还可以保证 wait 的一致性</p>
+<h3 id="8-2-信号量的基本应用"><a class="anchor" href="#8-2-信号量的基本应用">#</a>8.2 信号量的基本应用</h3>
+<p>无</p>
+<h3 id="8-3-管程"><a class="anchor" href="#8-3-管程">#</a>8.3 管程</h3>
+<p>讲义上没有所以写一下：</p>
+<p>管程与 PV 操作相比，管程是把临界资源、信号量、处理方法等封装成了一个统一的模型，只暴露一些外部接口用于业务操作</p>
+<p>管程是一套完备的接口和具体实现的封装，它是一段代码，可以被单独编译（需要连接）</p>
+<p>一个业务线程在调用管程方法时，如果不满足条件则会阻塞。当另一线程执行管程方法完毕并归还信号量时，信号量会通知这个阻塞的线程恢复执行</p>
+<p>管程的信号量除了业务需要的，还有一个避免竞态的（即同时只能有一个线程正在执行管程部分的代码）</p>
+<p>需要关注一下管程的写法（格式），因为会考</p>
+<h3 id="8-ex-练习题"><a class="anchor" href="#8-ex-练习题">#</a>8.ex 练习题</h3>
+<p>互斥使用缓冲区，即使容量很大，一次也只能有一个读/写</p>
+<h2 id="课时九-进程同步（三）"><a class="anchor" href="#课时九-进程同步（三）">#</a>课时九 进程同步（三）</h2>
+<h3 id="9-1-生产者消费者问题"><a class="anchor" href="#9-1-生产者消费者问题">#</a>9.1 生产者消费者问题</h3>
+<p>一个有上下界的、支持一次性放入或取出若干个元素的容器（为什么这么设计？）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">semaphore mutex_put = 1;</span><br><span class="line">semaphore mutex_get = 1;</span><br><span class="line">semaphore empty = SIZE;</span><br><span class="line">semaphore count = 0;</span><br><span class="line"></span><br><span class="line">semaphore mutex_buf = 1;</span><br><span class="line">int buf[SIZE];</span><br><span class="line"></span><br><span class="line">put(int c) &#123;</span><br><span class="line">  P(mutex_put);</span><br><span class="line">  for (int i = 0; i &lt; c; i++) &#123;</span><br><span class="line">    P(empty);</span><br><span class="line">    P(mutex_buf);</span><br><span class="line">    // put an element</span><br><span class="line">    V(mutex_buf);</span><br><span class="line">    V(count);</span><br><span class="line">  &#125;</span><br><span class="line">  V(mutex_put);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">get(int c) &#123;</span><br><span class="line">  P(mutex_get);</span><br><span class="line">  for (int i = 0; i &lt; c; i++) &#123;</span><br><span class="line">    P(count);</span><br><span class="line">    P(mutex_buf);</span><br><span class="line">    // get an element</span><br><span class="line">    V(mutex_buf);</span><br><span class="line">    V(empty);</span><br><span class="line">  &#125;</span><br><span class="line">  V(mutex_get);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-2-读者写者问题"><a class="anchor" href="#9-2-读者写者问题">#</a>9.2 读者写者问题</h3>
+<p>使用信号量互斥读写一个共享的变量是一个很有用的 trick</p>
+<h3 id="9-3-哲学家进餐问题"><a class="anchor" href="#9-3-哲学家进餐问题">#</a>9.3 哲学家进餐问题</h3>
+<p>举了一个会出现死锁的情景。三种解决办法：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>至多四个人拿筷子</p>
+</li>
+<li class="lvl-2">
+<p>将整个拿筷子过程变为原子的</p>
+</li>
+<li class="lvl-2">
+<p>按奇偶确定先拿哪个方向的筷子</p>
+</li>
+</ul>
+<h3 id="9-ex-练习题"><a class="anchor" href="#9-ex-练习题">#</a>9.ex 练习题</h3>
+<p>困死了，没有做</p>
+<h2 id="课时十-内存管理（一）"><a class="anchor" href="#课时十-内存管理（一）">#</a>课时十 内存管理（一）</h2>
+<h3 id="10-1-内存管理的基本原理和要求"><a class="anchor" href="#10-1-内存管理的基本原理和要求">#</a>10.1 内存管理的基本原理和要求</h3>
+<p>无</p>
+<h3 id="10-2-覆盖与交换"><a class="anchor" href="#10-2-覆盖与交换">#</a>10.2 覆盖与交换</h3>
+<p>关注进程状态转换图</p>
+<p>PCB 不会被换出外存</p>
+<h3 id="10-ex-练习题"><a class="anchor" href="#10-ex-练习题">#</a>10.ex 练习题</h3>
+<p>无</p>
+<h2 id="课时十一-内存管理（二）"><a class="anchor" href="#课时十一-内存管理（二）">#</a>课时十一 内存管理（二）</h2>
+<h3 id="11-1-连续分配管理"><a class="anchor" href="#11-1-连续分配管理">#</a>11.1 连续分配管理</h3>
+<p>关注内部碎片和外部碎片的定义，以及分配方式是否会导致这两种碎片</p>
+<h3 id="11-2-动态分区管理"><a class="anchor" href="#11-2-动态分区管理">#</a>11.2 动态分区管理</h3>
+<p>同上</p>
+<h3 id="11-ex-练习题"><a class="anchor" href="#11-ex-练习题">#</a>11.ex 练习题</h3>
+<p>动态可重定位：例如虚拟内存。物理上的一个块的虚拟地址可以改变</p>
+<h2 id="课时十二-内存管理（三）"><a class="anchor" href="#课时十二-内存管理（三）">#</a>课时十二 内存管理（三）</h2>
+<h3 id="12-1-分页存储管理方式"><a class="anchor" href="#12-1-分页存储管理方式">#</a>12.1 分页存储管理方式</h3>
+<p>快表就是个副本而已</p>
+<h3 id="12-2-分段存储管理方式"><a class="anchor" href="#12-2-分段存储管理方式">#</a>12.2 分段存储管理方式</h3>
+<p>分段式：程序分成不定长的几个段，在内存里分配完整的段</p>
+<h3 id="12-3-段页式管理方式"><a class="anchor" href="#12-3-段页式管理方式">#</a>12.3 段页式管理方式</h3>
+<p>段页式：分段后，把段用页面形式分配。每个段有自己的页表</p>
+<h3 id="12-ex-练习题"><a class="anchor" href="#12-ex-练习题">#</a>12.ex 练习题</h3>
+<p>没有做</p>
+<h2 id="课时十三-虚拟内存管理"><a class="anchor" href="#课时十三-虚拟内存管理">#</a>课时十三 虚拟内存管理</h2>
+<h3 id="13-1-虚拟内存的基本概念"><a class="anchor" href="#13-1-虚拟内存的基本概念">#</a>13.1 虚拟内存的基本概念</h3>
+<p>关注若干性质、特征等</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>多次性：分多次装入</p>
+</li>
+<li class="lvl-2">
+<p>对换性：不用的可以换下来</p>
+</li>
+<li class="lvl-2">
+<p>虚拟性：分配的地址空间大于物理地址空间</p>
+</li>
+<li class="lvl-2">
+<p>离散性：在物理上不连续</p>
+</li>
+</ul>
+<p>页面是虚拟内存上的概念，页框是物理内存上的概念，页表是页面到页框的对应</p>
+<p>和上一章一样都有分段、分页、段页。需要硬件支持。</p>
+<h3 id="13-2-页面置换算法"><a class="anchor" href="#13-2-页面置换算法">#</a>13.2 页面置换算法</h3>
+<p>FIFO 算法会出现 Belady 异常：分配给进程的物理块增多，但缺页次数不减反增</p>
+<p>举一个例子：<code>3 2 1 0 3 2 4 3 2 1 0 4</code> 在四个块的时候缺页 10 次，三个块的时候缺页 9 次</p>
+<blockquote>
+<p>TODO：研究一下如何构造一个例子</p>
+</blockquote>
+<h3 id="13-3-页面分配策略"><a class="anchor" href="#13-3-页面分配策略">#</a>13.3 页面分配策略</h3>
+<p>有很多概念需要看一看</p>
+<h3 id="13-ex-练习题"><a class="anchor" href="#13-ex-练习题">#</a>13.ex 练习题</h3>
+<p>无</p>
+<h2 id="课时十四-文件管理（一）"><a class="anchor" href="#课时十四-文件管理（一）">#</a>课时十四 文件管理（一）</h2>
+<h3 id="14-1-文件逻辑结构"><a class="anchor" href="#14-1-文件逻辑结构">#</a>14.1 文件逻辑结构</h3>
+<p>注意逻辑结构和实际存储方式是独立的</p>
+<h3 id="14-2-文件目录"><a class="anchor" href="#14-2-文件目录">#</a>14.2 文件目录</h3>
+<p>无</p>
+<h3 id="14-3-文件共享"><a class="anchor" href="#14-3-文件共享">#</a>14.3 文件共享</h3>
+<p>硬链接与软链接</p>
+<h3 id="14-4-文件保护"><a class="anchor" href="#14-4-文件保护">#</a>14.4 文件保护</h3>
+<p>无</p>
+<h3 id="14-ex-练习题"><a class="anchor" href="#14-ex-练习题">#</a>14.ex  练习题</h3>
+<p>read 系统调用需要的是文件描述符，需要通过 open 系统调用打开文件得到</p>
+<h2 id="课时十五-文件管理（二）"><a class="anchor" href="#课时十五-文件管理（二）">#</a>课时十五 文件管理（二）</h2>
+<h3 id="15-1-文件的物理结构"><a class="anchor" href="#15-1-文件的物理结构">#</a>15.1 文件的物理结构</h3>
+<p>注意不同点：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>显式链接分配：文件系统管理所有文件的所有块，包括已经在用的和空闲的。一个磁盘会建立一个文件分配表（FAT）</p>
+</li>
+<li class="lvl-2">
+<p>索引分配：文件系统管理所有文件，文件自行管理自己的块。一个文件建立一个索引表</p>
+</li>
+</ul>
+<h3 id="15-2-文件存储空间管理"><a class="anchor" href="#15-2-文件存储空间管理">#</a>15.2 文件存储空间管理</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>空闲表法：类似分段式内存分配</p>
+</li>
+<li class="lvl-2">
+<p>空闲链表法：以盘块为单位的分配</p>
+</li>
+<li class="lvl-2">
+<p>位示图法：直接维护所有块是否空闲，每次顺序寻找。存储的时候把若干个 bool 压到一个 byte 里面</p>
+</li>
+<li class="lvl-2">
+<p>成组链接法：没看</p>
+</li>
+</ul>
+<h3 id="15-ex-练习题"><a class="anchor" href="#15-ex-练习题">#</a>15.ex 练习题</h3>
+<p>链式结构+磁盘块定长可以支持文件的扩展。一般来说磁盘块都是一样长（定长）的</p>
+<p>文件索引节点分配块的时候，类似于 {直接: 1} {直接: 1} {直接: 1} {直接: 1} {一级: 2^10} {一级: 2^10} {二级: 2^20}，前面不够用了就启用后面的。启用的是一个前缀，所以容量为总和</p>
+<p>需要注意是否考虑间接块的大小；<strong>需要关注索引节点是否已经读入内存</strong></p>
+<h2 id="课时十六-文件管理（三）"><a class="anchor" href="#课时十六-文件管理（三）">#</a>课时十六 文件管理（三）</h2>
+<h3 id="16-1-文件的基本操作"><a class="anchor" href="#16-1-文件的基本操作">#</a>16.1 文件的基本操作</h3>
+<p>关注这里的“打开”操作，之前提到过</p>
+<h3 id="16-2-文件系统的层次结构"><a class="anchor" href="#16-2-文件系统的层次结构">#</a>16.2 文件系统的层次结构</h3>
+<p>无</p>
+<h3 id="16-ex-练习题"><a class="anchor" href="#16-ex-练习题">#</a>16.ex 练习题</h3>
+<p>区分“文件目录”（目录项，inode/FCB）和“目录文件”（directory）</p>
+<h2 id="课时十七-磁盘的组织与管理"><a class="anchor" href="#课时十七-磁盘的组织与管理">#</a>课时十七 磁盘的组织与管理</h2>
+<h3 id="17-1-磁盘"><a class="anchor" href="#17-1-磁盘">#</a>17.1 磁盘</h3>
+<p>无</p>
+<h3 id="17-2-磁盘调度算法"><a class="anchor" href="#17-2-磁盘调度算法">#</a>17.2 磁盘调度算法</h3>
+<p>无（计组学过了）</p>
+<h3 id="17-3-磁盘的管理"><a class="anchor" href="#17-3-磁盘的管理">#</a>17.3 磁盘的管理</h3>
+<p>关注这里的一些概念</p>
+<h3 id="17-ex-练习题"><a class="anchor" href="#17-ex-练习题">#</a>17.ex 练习题</h3>
+<p>没有做！</p>
+<h2 id="课时十八-I-O-设备管理（一）"><a class="anchor" href="#课时十八-I-O-设备管理（一）">#</a>课时十八 I/O 设备管理（一）</h2>
+<h3 id="18-1-I-O-设备的基本概念和分类"><a class="anchor" href="#18-1-I-O-设备的基本概念和分类">#</a>18.1 I/O 设备的基本概念和分类</h3>
+<p>无</p>
+<h3 id="18-2-I-O-控制方式"><a class="anchor" href="#18-2-I-O-控制方式">#</a>18.2 I/O 控制方式</h3>
+<p>中断和 DMA 的区别：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>中断：</p>
+<ul class="lvl-2">
+<li class="lvl-5">I/O Device：INT …</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>DMA：</p>
+<ul class="lvl-2">
+<li class="lvl-5">I/O Device：DMA</li>
+<li class="lvl-5">CPU：控制权交给 DMA 控制器</li>
+<li class="lvl-5">DMA 控制器：处理整块数据（例如写入内存）后发出中断归还控制权</li>
+</ul>
+</li>
+</ul>
+<p>DMA 控制器里面的寄存器：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>CR 命令/状态</p>
+</li>
+<li class="lvl-2">
+<p>MAR 内存地址</p>
+</li>
+<li class="lvl-2">
+<p>DR 数据</p>
+</li>
+<li class="lvl-2">
+<p>DC 数据计数（长度）</p>
+</li>
+</ul>
+<p>还要注意一下通道这种更高级的方式</p>
+<h3 id="18-ex-练习题"><a class="anchor" href="#18-ex-练习题">#</a>18.ex 练习题</h3>
+<p>无</p>
+<h2 id="课时十九-I-O-设备管理（二）"><a class="anchor" href="#课时十九-I-O-设备管理（二）">#</a>课时十九 I/O 设备管理（二）</h2>
+<h3 id="19-1-I-O-软件层次结构"><a class="anchor" href="#19-1-I-O-软件层次结构">#</a>19.1 I/O 软件层次结构</h3>
+<p>往年考过，需要仔细了解</p>
+<h3 id="19-2-I-O-子系统概述"><a class="anchor" href="#19-2-I-O-子系统概述">#</a>19.2 I/O 子系统概述</h3>
+<p>需要注意高速缓存和缓冲区的区别</p>
+<h3 id="19-ex-练习题"><a class="anchor" href="#19-ex-练习题">#</a>19.ex 练习题</h3>
+<p>无</p>
+<h2 id="课时二十-I-O-设备管理（三）"><a class="anchor" href="#课时二十-I-O-设备管理（三）">#</a>课时二十 I/O 设备管理（三）</h2>
+<h3 id="20-1-设备分配与回收"><a class="anchor" href="#20-1-设备分配与回收">#</a>20.1 设备分配与回收</h3>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>DCT（Device Control Table）设备控制表</p>
+</li>
+<li class="lvl-2">
+<p>CHCT（CHannel Control Table）通道控制表</p>
+</li>
+<li class="lvl-2">
+<p>COCT（Controller Control Table）控制器控制表</p>
+</li>
+<li class="lvl-2">
+<p>SDT（System Device Table）系统设备表</p>
+</li>
+</ul>
+<p>DCT 管理具体设备，CHCT 管理通道</p>
+<p>对设备的访问需要经过通道。控制器即为具体设备寻求通道为其服务的抽象，所以 DCT COCT 一对一，COCT CHCT 多对一</p>
+<h3 id="20-2-SPOOLing-技术"><a class="anchor" href="#20-2-SPOOLing-技术">#</a>20.2 SPOOLing 技术</h3>
+<p>需要关注 SPOOLing 系统的原理图</p>
+<p>注意缓冲区只是用来联通内存与硬盘、硬盘与设备的</p>
+<h3 id="20-ex-练习题"><a class="anchor" href="#20-ex-练习题">#</a>20.ex 练习题</h3>
+<p>无</p>
+<h1 id="第二部分-往年题整理"><a class="anchor" href="#第二部分-往年题整理">#</a>第二部分 往年题整理</h1>
+<p>TODO</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Todo/" rel="tag"># Todo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/03/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" rel="prev" title="编译原理">
+                  <i class="fa fa-angle-left"></i> 编译原理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/06/11/%E5%8D%B0%E8%B1%A1%E6%B4%BE%E5%92%96%E5%95%A1%E6%9C%BA/" rel="next" title="印象派咖啡机">
+                  印象派咖啡机 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-dragon"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XiEn</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">146k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"aliasrevir/aliasrevir.github.io","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>

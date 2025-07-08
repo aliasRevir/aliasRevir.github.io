@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+<link
+  rel="stylesheet"
+  href="https://fastly.jsdelivr.net/npm/katex/dist/katex.min.css"
+/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bronova:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"aliasrevir.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.23.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"flat"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"duration":15,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","post_body":"fadeIn","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="翘课回来读课本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算系统基础乱写">
+<meta property="og:url" content="https://aliasrevir.github.io/2023/09/18/%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E4%B9%B1%E5%86%99/index.html">
+<meta property="og:site_name" content="XiEn&#39;s Cave">
+<meta property="og:description" content="翘课回来读课本">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-18T08:11:00.000Z">
+<meta property="article:modified_time" content="2023-09-18T08:11:00.000Z">
+<meta property="article:author" content="XiEn">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://aliasrevir.github.io/2023/09/18/%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E4%B9%B1%E5%86%99/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://aliasrevir.github.io/2023/09/18/%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E4%B9%B1%E5%86%99/","path":"2023/09/18/计算系统基础乱写/","title":"计算系统基础乱写"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>计算系统基础乱写 | XiEn's Cave</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script size="200" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XiEn's Cave</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Wandering astray, trying to postpone tomorrow</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-逆流"><a href="/2023/05/02/countdown-unleashed/" rel="section"><i class="fa fa-crow fa-bounce fa-fw"></i>逆流</a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%95%E8%A8%80"><span class="nav-text">第一章 引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA"><span class="nav-text">第六章 数据的机器级表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF"><span class="nav-text">第七章 数字逻辑电路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%86%AF%C2%B7%E8%AF%BA%E4%BC%8A%E6%9B%BC%E6%A8%A1%E5%9E%8B"><span class="nav-text">第八章 冯·诺伊曼模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E6%8C%87%E4%BB%A4%E9%9B%86%E7%BB%93%E6%9E%84-ISA"><span class="nav-text">第九章 指令集结构 ISA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E6%9C%BA%E5%99%A8%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="nav-text">第十章 机器语言程序设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80"><span class="nav-text">第十一章 汇编语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-text">第十二章 输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E8%87%AA%E9%99%B7%E4%BE%8B%E7%A8%8B%E5%92%8C%E4%B8%AD%E6%96%AD"><span class="nav-text">第十三章 自陷例程和中断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD%E7%9A%84%E4%BA%A7%E7%94%9F%EF%BC%9A"><span class="nav-text">中断的产生：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD%E7%9A%84%E5%A4%84%E7%90%86%EF%BC%9A"><span class="nav-text">中断的处理：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E5%AD%90%E4%BE%8B%E7%A8%8B"><span class="nav-text">第十四章 子例程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E5%87%BD%E6%95%B0"><span class="nav-text">第十五章 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E6%8C%87%E9%92%88%E5%92%8C%E6%95%B0%E7%BB%84"><span class="nav-text">第十六章 指针和数组</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XiEn"
+      src="/images/avatar-plain.png">
+  <p class="site-author-name" itemprop="name">XiEn</p>
+  <div class="site-description" itemprop="description">龙形全自动咕咕机</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/aliasRevir" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;aliasRevir" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:XiEn@smail.nju.edu.cn" title="E-Mail → mailto:XiEn@smail.nju.edu.cn" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/352199295" title="BiliBili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;352199295" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.furaffinity.net/user/amagddon" title="FurAffinity → https:&#x2F;&#x2F;www.furaffinity.net&#x2F;user&#x2F;amagddon" rel="noopener me" target="_blank"><i class="fa fa-dragon fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://aliasrevir.github.io/2023/09/18/%E8%AE%A1%E7%AE%97%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E4%B9%B1%E5%86%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-plain.png">
+      <meta itemprop="name" content="XiEn">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XiEn's Cave">
+      <meta itemprop="description" content="龙形全自动咕咕机">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="计算系统基础乱写 | XiEn's Cave">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算系统基础乱写
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-09-18 16:11:00" itemprop="dateCreated datePublished" datetime="2023-09-18T16:11:00+08:00">2023-09-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/40-x-%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">40.x 笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/40-x-%E7%AC%94%E8%AE%B0/40-1-%E8%AF%BE%E7%A8%8B%E5%A4%8D%E4%B9%A0-NJUSE/" itemprop="url" rel="index"><span itemprop="name">40.1 课程复习@NJUSE</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="第一章-引言"><a class="anchor" href="#第一章-引言">#</a>第一章 引言</h2>
+<p>图灵机。程序表：（当前状态标号，当前方格符号）加（修改后符号，移动方向，下一状态标号）</p>
+<p>算法：有限性，确定性，有效可计算性；</p>
+<h2 id="第六章-数据的机器级表示"><a class="anchor" href="#第六章-数据的机器级表示">#</a>第六章 数据的机器级表示</h2>
+<p>补码就是 2^k 减原数；符号扩展就是复读符号位。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[sgn:1] [exp:8] [frac:23]</span><br><span class="line">exp==255: frac==0, Inf</span><br><span class="line">          frac!=0, NaN</span><br><span class="line">exp==0  : 2^(-126)    * 0.frac</span><br><span class="line">default : 2^(exp-127) * 1.frac</span><br></pre></td></tr></table></figure>
+<p>解释一下这个为什么不对称：规格化导致 frac 必然是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">[1,2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span> 里面的，而如果在 exp==254 处拆表示方式，必然需要将二进制位放到小数点左边，这样就需要额外信息了。</p>
+<h2 id="第七章-数字逻辑电路"><a class="anchor" href="#第七章-数字逻辑电路">#</a>第七章 数字逻辑电路</h2>
+<p>晶体管：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>金属氧化物半导体 Metal-Oxide Semiconductor，栅极 Gate，源极 Source，漏极 Drain。</p>
+</li>
+<li class="lvl-2">
+<p>N-MOS 栅极通电则导通，P-MOS 栅极通电则断开。P-MOS 图示上栅极有个圆圈。</p>
+</li>
+<li class="lvl-2">
+<p>物理结构上源极和漏极完全相同。载流子从源极向漏极移动形成电流，N-MOS 为电子，P-MOS 为空穴。</p>
+</li>
+<li class="lvl-2">
+<p>CMOS 为同时含有两种 MOS 晶体管的电路。</p>
+</li>
+</ul>
+<p>门电路：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>把输入同时连上 N-MOS 和 P-MOS 相当于 if-else，则可实现 NOT。由此，利用串联并联实现 AND/NOR 即可。</p>
+</li>
+<li class="lvl-2">
+<p>注意要输出 0 必须连 GND，不能不连。</p>
+</li>
+</ul>
+<p>组合逻辑电路：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>译码器：多路 AND；</p>
+</li>
+<li class="lvl-2">
+<p>多路选择器：选择信号与输入做 AND。</p>
+</li>
+<li class="lvl-2">
+<p>全加法器接受三个输入，输出二进制表示的结果。拿译码器硬凑就行。</p>
+</li>
+<li class="lvl-2">
+<p>可编程逻辑阵列 Programmable Logic Array，就是译码器 + 接线 + 一坨 OR。</p>
+</li>
+<li class="lvl-2">
+<p>逻辑完备性 Logical Completeness，即任意逻辑函数可使用给定的门集合实现。</p>
+</li>
+</ul>
+<p>R-S 锁存器：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>可以存储 1 位的信息。</p>
+</li>
+<li class="lvl-2">
+<p>结构：S NAND B = A，R NAND A = B</p>
+</li>
+<li class="lvl-2">
+<p>存储：R = S = 1，此时 A XOR B = 1，称为存储了 A 的值。</p>
+</li>
+<li class="lvl-2">
+<p>设置：将 S 设为 0 并改回，此时 A 被设为 1。</p>
+</li>
+<li class="lvl-2">
+<p>注意：若令 R = S = 0，则 A, B 均变为 1。下次通电时，由于时延，RS 通电顺序不确定，不确定内部状态，需要再次存储。</p>
+</li>
+</ul>
+<p>门控 D 锁存器：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>结构：在 R, S 前接两个 NAND，两个输入。</p>
+</li>
+<li class="lvl-2">
+<p>使用：Write Enable = 1 时，写入 D，否则保持原值。</p>
+</li>
+</ul>
+<p>寄存器 Register：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>一个 WE，若干个 D。</p>
+</li>
+</ul>
+<p>时序逻辑电路，就是状态机。</p>
+<h2 id="第八章-冯·诺伊曼模型"><a class="anchor" href="#第八章-冯·诺伊曼模型">#</a>第八章 冯·诺伊曼模型</h2>
+<p>地址空间即单元数，寻址能力即每单元的信息量。对于 DLX，地址空间为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>32</mn></msup></mrow><annotation encoding="application/x-tex">2^{32}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">32</span></span></span></span></span></span></span></span></span></span></span></span>，寻址能力为一字节，即 8 位。字长是 ALU 处理的信息量大小，一般为 32 或 64 位。DLX 为 32 位。
+DLX 有 32 个通用寄存器和浮点寄存器 R0,R1,…,R31,F0,F1,…,F31，每个均为 32 位。</p>
+<p>DLX 有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>32</mn></msup></mrow><annotation encoding="application/x-tex">2^{32}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">32</span></span></span></span></span></span></span></span></span></span></span></span> 个存储单元，每个存储单元包含 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn></mrow><annotation encoding="application/x-tex">8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span></span></span></span> 位内容。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*(x4000 0000) = x12</span><br><span class="line">*(x4000 0001) = x98</span><br><span class="line">*(x4000 0002) = x00</span><br></pre></td></tr></table></figure>
+<p>程序计数器 Program Counter，指向要运行的下一条指令；指令寄存器 Instruction Register，保存正在处理的指令。</p>
+<p>存储器包含存储单元、用于寻址的地址寄存器 MAR、用于存取单元内容的数据寄存器 MDR。先将目标地址存入 MAR，然后即可将值复制到 MDR 或将 MDR 存入。</p>
+<p>IO：键盘和显示器。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>键盘：KBDR 保存输入字符 ASCII 码，KBSR 提供输入字符状态信息；</p>
+</li>
+<li class="lvl-2">
+<p>显示器：DDR 保存显示内容 ASCII 码，DSR 提供状态信息。</p>
+</li>
+</ul>
+<p>DLX 指令执行的五个阶段：（每条 DLX 指令包含三到五个阶段）</p>
+<ol>
+<li class="lvl-3">
+<p>取指令：加载 PC 至 MAR，PC+=4（即下一个指令的地址），读取，将 MDR （即取出的下一条指令）的值存入 IR；</p>
+</li>
+<li class="lvl-3">
+<p>译码/取寄存器：IR[31:26] 输入控制器，同时获取指定寄存器的内容，存入 ALU 的 A,B 寄存器。</p>
+</li>
+<li class="lvl-3">
+<p>执行/有效地址/完成分支：进行算术/逻辑运算，或计算出给定的存储单元地址，或进行分支跳转。</p>
+</li>
+<li class="lvl-3">
+<p>访问内存：以 LW（将内存加载到寄存器）为例：将 ALUOut 存入 MAR 中并读取存储器，将目标值读到 MDR 中。</p>
+</li>
+<li class="lvl-3">
+<p>存储结果：从 MDR 或 ALUOut 存入 Rx 寄存器。</p>
+</li>
+</ol>
+<p>时钟周期：先上升至 3.3V，再降至 0V。</p>
+<h2 id="第九章-指令集结构-ISA"><a class="anchor" href="#第九章-指令集结构-ISA">#</a>第九章 指令集结构 ISA</h2>
+<p>DLX 采用高位优先 Big-Endian，即一字长的信息中，左侧高位位于内存低地址端，且字的地址必须是 4 的倍数，即边界对齐。</p>
+<p>通用寄存器 GPR，R0 的内容必须为 0。
+CISC 复杂指令集计算机，如 x86；RISC 精简指令集计算机，如 MIPS, SPARC, PowerPC, DLX。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xU for unused</span><br><span class="line">I-[31 opcode 26][25 SR1 21][20 DR  16][15 Imm16                  0] *calculation</span><br><span class="line">I-[31 opcode 26][25 SR1 21][20 xU  16][15 Imm16                  0] *BEQZ/BNEZ</span><br><span class="line">R-[31 opcode 26][25 SR1 21][20 SR2 16][15 DR 11][10 xU 6][5 func 0]</span><br><span class="line">J-[31 opcode 26][25 PCoffset26                                   0] *J,TRAP,others</span><br><span class="line">J-[31 opcode 26][25 SR2 21][20 SR1 16][15 signedoffset           0] *R/W memory</span><br></pre></td></tr></table></figure>
+<p>SR 为源操作数所在寄存器，DR 为目标操作数将写入的寄存器。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>在 I-类型中，第二个操作数为 Imm16 符号扩展后的值。</p>
+</li>
+<li class="lvl-2">
+<ul class="lvl-2">
+<li class="lvl-4">对于 I-类的 BEQZ/BNEQ，先计算 PC+Imm16。若 SR1 为/不为 0，则将其存入 PC 中。</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>在 R-类型中，func 为对应 I-类型的 opcode。</p>
+</li>
+<li class="lvl-2">
+<p>在 J-类型中，内存地址为 SR2 的值加 signedoffset，要操作的寄存器 SR1。（注意左右）</p>
+</li>
+<li class="lvl-2">
+<ul class="lvl-2">
+<li class="lvl-4">对于 J-类的 J，先计算 PC+PCoffset26，然后将其存入 PC 中。</li>
+</ul>
+</li>
+<li class="lvl-2">
+<ul class="lvl-2">
+<li class="lvl-4">对于 J-类的 TRAP，PCoffset26 为 TRAP向量。调用 TRAP向量 对应的服务例程后，PC 指向 TRAP 的下一条指令。</li>
+</ul>
+</li>
+<li class="lvl-2">
+<p>通常来说，最右侧的寄存器为目标地址。</p>
+</li>
+</ul>
+<h2 id="第十章-机器语言程序设计"><a class="anchor" href="#第十章-机器语言程序设计">#</a>第十章 机器语言程序设计</h2>
+<p>然而你发现这玩意简直等价于 <code>if(STATEMENT)&#123;goto LABEL;&#125;</code> 组成的 c 程序，所以不再赘述。</p>
+<h2 id="第十一章-汇编语言"><a class="anchor" href="#第十一章-汇编语言">#</a>第十一章 汇编语言</h2>
+<p>包含标记 Label、操作码 Opcode、操作数 Operands、注释 Comments 四部分。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">;</span><br><span class="line">; 对 10 个整数求和的程序</span><br><span class="line">;</span><br><span class="line">; 10 个整数及累加和</span><br><span class="line">            .data       x0000600A</span><br><span class="line">            .align      2</span><br><span class="line">numbers:    .word       #10,#3,#4,#6,#8,#-2,#45,#5,#8,#9</span><br><span class="line">sum:        .space      4</span><br><span class="line">;</span><br><span class="line">; 初始化</span><br><span class="line">            .text       x40000000</span><br><span class="line">            .global     main</span><br><span class="line">main:       ADDI        R1,R0,numbers</span><br><span class="line">            ADDI        R3,R0,#0                        ; R3 清零，它将包含和</span><br><span class="line">            ADDI        R2,R0,#10                       ; R2 包含整数个数</span><br><span class="line">;</span><br><span class="line">; 循环计算</span><br><span class="line">again:      BEQZ        R2,exit</span><br><span class="line">            LW          R4,0(R1)                        ; address:R1.val+0</span><br><span class="line">            ADD         R3,R3,R4</span><br><span class="line">            ADDI        R1,R1,#4                        ; R1 跟踪下一个整数地址</span><br><span class="line">            SUBI        R2,R2,#1</span><br><span class="line">            J           again</span><br><span class="line">exit:       SW          sum(R0),R3                      ; address:sum+R0.val</span><br><span class="line">            TRAP        #0</span><br><span class="line">; 程序结束</span><br><span class="line">; ======= 分割线 =======</span><br><span class="line">; 以下是另一些指令的示例</span><br><span class="line">A:          LHI         R1,A                            ; R1=high(A)</span><br><span class="line">; if A=x3000 01A0, then R1=x3000 0000</span><br></pre></td></tr></table></figure>
+<p>标记：由字母、数字、下划线组成，并以字母、下划线或 <code>$</code> 开头，以冒号结尾。指令操作码属于保留字，不能用作标记。</p>
+<p>立即数：<code>#</code> 为十进制，<code>x</code> 为十六进制，<code>b</code> 为二进制。</p>
+<p>伪操作：操作码以 <code>.</code> 开头。数据和指令分别按 <code>.data</code>,<code>.text</code> 的指示存在不同区域：数据区和代码区。</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>数据区：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.address    x0000600A       ; 数据起始于单元 x0000600A。由对齐原则，不能直接存储字。</span><br><span class="line">.align      2               ; 将下面的内容加载到以 2 个 0 结尾的地址中。</span><br><span class="line">.word       #1,#2,#4        ; 连续存储若干个字。</span><br><span class="line">.ascii      &quot;string1&quot;,&quot;str&quot; ; 若干个字符串。</span><br><span class="line">.asciiz     &quot;string1&quot;,&quot;str&quot; ; 若干个空终止字符串：每个串末尾存储一个字节 0。</span><br><span class="line">.space      4               ; 留出 4 个字节。</span><br></pre></td></tr></table></figure>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>代码区：</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.text       x40000000       ; 程序起始于单元 x40000000。可以不给出地址，由链接器分配</span><br><span class="line">.align      2               ;</span><br><span class="line">.global     label           ; 将 label 声明为全局标记，可以跨文件使用</span><br></pre></td></tr></table></figure>
+<p>汇编过程：扫描两遍，第一遍构建符号表，第二遍进行替换。如何计算地址？汇编器记录 Location Counter。（注意区分 PC 与 LC，LC 是汇编器的运行时局部变量，PC 对应一个结构）</p>
+<p>链接：由多个目标文件生成可执行程序。在这里处理跨模块的标记引用，并重分配内存。即相当于多文件的汇编。</p>
+<p>C-DLX 编译：你发现这玩意几乎等价于第十章。不过下面要介绍变量的存储方式：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>栈：你知道这是什么。这里的实现是维护一个栈顶指针。</p>
+</li>
+<li class="lvl-2">
+<p>全局数据区存储静态存储类变量，运行时栈存储局部变量。</p>
+</li>
+<li class="lvl-2">
+<p>DLX 使用 R28 作为全局指针，即包含全局数据区的起始地址。</p>
+</li>
+<li class="lvl-2">
+<p>DLX 使用 R29 作为栈指针，R30 作为框架指针/帧指针，帧指针为方便访问局部变量而用的。</p>
+</li>
+<li class="lvl-2">
+<p>（更详细的介绍参见第十五章）</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">x0000 0000  |  系统空间</span><br><span class="line">            | ---------- |&lt;-- PC</span><br><span class="line">            |  代码区</span><br><span class="line">            | ---------- |&lt;-- R28</span><br><span class="line">            |  全局数据区</span><br><span class="line">            | ---------- |</span><br><span class="line">            |  堆</span><br><span class="line">            | v -------- |</span><br><span class="line">            |</span><br><span class="line">            | ^ -------- |&lt;-- R29</span><br><span class="line">            |            |&lt;-- R30</span><br><span class="line">            |  运行时栈</span><br><span class="line">            | ---------- |</span><br><span class="line">xFFFF FFFF  |  系统空间</span><br></pre></td></tr></table></figure>
+<h2 id="第十二章-输入和输出"><a class="anchor" href="#第十二章-输入和输出">#</a>第十二章 输入和输出</h2>
+<p>一个 I/O 设备至少包括两个设备寄存器：一个保存数据，一个保存状态信息。</p>
+<p>两种机制：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>x86 指令集等：使用专门的 I/O 指令与 I/O 设备寄存器交互</p>
+</li>
+<li class="lvl-2">
+<p>DLX 等：使用内存映射方式：内存中的某些地址被分配给寄存器，而非存储单元</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">地址</th>
+<th style="text-align:center">I/O 寄存器</th>
+<th style="text-align:center">数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">xFFFF0000</td>
+<td style="text-align:center">键盘状态寄存器 KBSR</td>
+<td style="text-align:center">最低位</td>
+</tr>
+<tr>
+<td style="text-align:center">xFFFF0004</td>
+<td style="text-align:center">键盘数据寄存器 KBDR</td>
+<td style="text-align:center">低八位</td>
+</tr>
+<tr>
+<td style="text-align:center">xFFFF0008</td>
+<td style="text-align:center">显示器状态寄存器 DSR</td>
+<td style="text-align:center">最低位</td>
+</tr>
+<tr>
+<td style="text-align:center">xFFFF000C</td>
+<td style="text-align:center">显示器数据寄存器 DDR</td>
+<td style="text-align:center">低八位</td>
+</tr>
+<tr>
+<td style="text-align:center">xFFFF00F8</td>
+<td style="text-align:center">机器控制寄存器 MCR</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>DLX 中，读 KBDR 的一个示例：（注意区分：KBDR标记处存储的是KBDR的地址，它不是KBDR本身）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">KBDR:       .word       xFFFF0004       ; KBDR 的起始地址是 xFFFF0004</span><br><span class="line">; 和下面这句没本质区别</span><br><span class="line">A:          .word       xFFFF0004       ; KBDR 的起始地址是 xFFFF0004</span><br><span class="line">...</span><br><span class="line">            LW          R1,KBDR(R0)     ; R1 存储 KBDR 的位置</span><br><span class="line">            LW          R4,0(R1)        ; 读到 R4 中</span><br></pre></td></tr></table></figure>
+<p>通信的方式：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>轮询：如果 KBSR 未就绪，就重复读取，直到就绪后再读 KBDR。浪费了大量处理器时间</p>
+</li>
+<li class="lvl-2">
+<p>中断驱动：I/O 设备向处理器发来中断信号。</p>
+</li>
+</ul>
+<h2 id="第十三章-自陷例程和中断"><a class="anchor" href="#第十三章-自陷例程和中断">#</a>第十三章 自陷例程和中断</h2>
+<p>DLX 有 256 个服务例程，可以被 TRAP 指令调用。</p>
+<p>TRAP 向量表长为 256 * 4，存储了 256 个例程的（代码区）起始地址。可以规定数据区为代码区起始地址前 x100 个单元的位置。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">TRAP 向量</th>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">x06</td>
+<td style="text-align:center">GETC</td>
+<td style="text-align:center">读一个字符，将其 ASCII 码复制到 <code>R4[7:0]</code></td>
+</tr>
+<tr>
+<td style="text-align:center">x07</td>
+<td style="text-align:center">OUT</td>
+<td style="text-align:center">输出一个字符 <code>R4[7:0]</code></td>
+</tr>
+<tr>
+<td style="text-align:center">x08</td>
+<td style="text-align:center">PUTS</td>
+<td style="text-align:center">输出以 R4 所指地址开头的空终止字符串，每个字符占一个内存单元</td>
+</tr>
+<tr>
+<td style="text-align:center">x09</td>
+<td style="text-align:center">IN</td>
+<td style="text-align:center">输出一个提示符，读取一个字符至 R4 并回显</td>
+</tr>
+<tr>
+<td style="text-align:center">x0A</td>
+<td style="text-align:center">GETS</td>
+<td style="text-align:center">R4 存地址，R5 为长度 n，读取至多 n-1 个字符（回车结束）并存入 R4，空终止</td>
+</tr>
+<tr>
+<td style="text-align:center">x00</td>
+<td style="text-align:center">HALT</td>
+<td style="text-align:center">停机</td>
+</tr>
+</tbody>
+</table>
+<p>调用 TRAP 的一个过程：</p>
+<ol>
+<li class="lvl-3">
+<p>将 26 位 TRAP 向量扩展至 32 位，并左移两位得到向量表的地址，存入 MAR（例如 x09 变为 x00000024 ）</p>
+</li>
+<li class="lvl-3">
+<p>将向量表内的地址加载进 MDR （例如 x00000024 的内容为 x00003100，它是 IN 子例程的起始地址）</p>
+</li>
+<li class="lvl-3">
+<p>R31 保存 PC 的当前内容（即用户程序的下一条指令）</p>
+</li>
+<li class="lvl-3">
+<p>将 MDR 加载进 PC（即例程的起始地址）</p>
+</li>
+<li class="lvl-3">
+<p>执行子例程</p>
+</li>
+<li class="lvl-3">
+<p>将 R31 加载进 PC。可以使用 <code>JR R31</code> 或其助记符 <code>RET</code>。</p>
+</li>
+</ol>
+<p>但是这里有一个问题：TRAP 指令及服务例程会破坏当前的寄存器状态。<br>
+caller-save：调用者保存；callee-save：被调用者保存；知道哪些寄存器将被使用的程序应该来处理这个问题。<br>
+具体的做法：手动 <code>SW/LW</code>。</p>
+<h4 id="中断的产生："><a class="anchor" href="#中断的产生：">#</a>中断的产生：</h4>
+<p>KBSR、DSR 的就绪位（[0] 位）为 1 时，表示设备需要服务；中断允许位（[1] 位，IE）为 1 时，表示是否有权利请求服务；中断请求信号 IRQ 为其逻辑与。<br>
+状态寄存器 SR 是一个特殊寄存器，只能在特权模式下访问。<br>
+所有 IE 位可以被 SR[0] 同时改写，即允许/禁止全部中断。SR[1] 表示当前程序的模式：特权模式为 0，用户模式为 1。</p>
+<p>中断信号 INT 为所有设备 IRQ 的逻辑或。同时，有一个原因寄存器 CAUSE 保存中断信号的来源：CAUSE[15:10] 表示来自六个硬件的未决中断，[10] 为显示器，[11] 为键盘；CAUSE[9:8] 表示来自两个软件的未决中断。从左到右优先级依次降低。</p>
+<p>中断发生时，用 SR[2:3] 保存原来 SR[0:1] 的值，用 EPC 保存 PC 的值。</p>
+<h4 id="中断的处理："><a class="anchor" href="#中断的处理：">#</a>中断的处理：</h4>
+<p>SR[15:8] 给出中断阻塞方案，设为 1 表示允许当前位的中断。存在多个中断时，从左到右处理。</p>
+<p>两个整数寄存器和特殊寄存器间数据传送的指令：<code>MOVI2S</code>、<code>MOVS2I</code>，每个特殊寄存器用 5 位编码。（指令附在本段末尾）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">编号 D</th>
+<th style="text-align:center">编号 H</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">SR</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">x0C</td>
+</tr>
+<tr>
+<td style="text-align:center">CAUSE</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">x0D</td>
+</tr>
+<tr>
+<td style="text-align:center">EPC</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">x0E</td>
+</tr>
+</tbody>
+</table>
+<p>从中断返回时，清空 CAUSE，然后使用 <code>RFE</code> 指令恢复 PC、SR[1:0] 的值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RFE    | 110001 00000 00000 00000 0000000000</span><br><span class="line">MOVI2S | 100010 00000 ..... ..... 0000000000</span><br><span class="line">MOVS2I | 100011 00000 ..... ..... 0000000000</span><br><span class="line">                      GPR   special</span><br></pre></td></tr></table></figure>
+<h2 id="第十四章-子例程"><a class="anchor" href="#第十四章-子例程">#</a>第十四章 子例程</h2>
+<p>调用/返回时的具体操作类似 TRAP：调用时将 PC 设为子例程起始位置，R31 设为下一条指令。返回时调用 JR R31。</p>
+<p>调用子例程的操作码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">              PCOffset26</span><br><span class="line">JAL  | 101110 00000000000000000000000000</span><br><span class="line">JALR | 101111 00000 000000000000000000000</span><br><span class="line">              Rx    unused</span><br></pre></td></tr></table></figure>
+<p>JAL 等价于 J 指令加上保存 R31，会跳转到下一条指令 + [PCOffset26 的符号扩展] 的位置；JALR 会跳转到给出寄存器里的地址的位置。</p>
+<p>调用库例程的时候，需要在代码区写一个 <code>.extern SQRT</code> 表示程序中会调用库例程中的 <code>.global SQRT</code>。</p>
+<h2 id="第十五章-函数"><a class="anchor" href="#第十五章-函数">#</a>第十五章 函数</h2>
+<p>简要介绍一下 C 函数在底层的实现。</p>
+<p>可以将 R4-R7 用于参数传递，R2-R3 用于返回值，R31 用于返回地址，R16-R23 用于局部变量，R8-R15、R24、R25 用于存储临时产生的值。因此，参数个数多于四个时，需要使用存储器。</p>
+<p>对于每次函数调用，R30 始终指向活动记录的基址（即一段的底部），R29 指向栈顶。</p>
+<p>函数调用机制：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>调用函数：将变元复制到被调用函数可访问的存储区域内（即将超出4个的参数压入栈顶）</p>
+</li>
+</ul>
+<blockquote>
+<p>压栈：<code>SUBI R29,R29,#4;  SW 0(R29),value</code> 即栈顶指针减四，然后在所指内存存储数据。压栈结束后 <code>JAL subprocess</code>。</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>被调用函数：在栈上保存（即备份）部分寄存器的值，同时分配局部变量</p>
+</li>
+</ul>
+<blockquote>
+<p>在栈上备份 R31（如果需要）和 R30，然后将 R30 指向参数之上（即 R30+#4 即为保存的最靠上的参数）。然后备份寄存器，分配局部变量，最后调整 R29 使得其指向栈顶（即最靠上的元素）。</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>被调用函数：运行</p>
+</li>
+<li class="lvl-2">
+<p>被调用函数：运行完成，弹出活动记录，控制返回到调用函数中</p>
+</li>
+</ul>
+<blockquote>
+<p>弹出参数（如果又调用了其他函数），弹出局部变量，恢复寄存器，恢复动态链接 R30，恢复返回地址 R31，调用 <code>RET</code> 返回控制权。</p>
+</blockquote>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>调用函数：取返回值 R2</p>
+</li>
+</ul>
+<h2 id="第十六章-指针和数组"><a class="anchor" href="#第十六章-指针和数组">#</a>第十六章 指针和数组</h2>
+<p>数组在栈上空间的分配还是顺序的。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/07/28/never-worth-it/" rel="prev" title="sjzez OIer 去向统计表">
+                  <i class="fa fa-angle-left"></i> sjzez OIer 去向统计表
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/10/17/%E4%B9%9F%E8%AE%B8%E4%BB%80%E4%B9%88/" rel="next" title="也许什么">
+                  也许什么 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-dragon"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XiEn</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">146k</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"aliasrevir/aliasrevir.github.io","issue_term":"pathname","theme":"github-dark"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>
